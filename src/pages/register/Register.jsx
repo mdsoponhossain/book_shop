@@ -1,6 +1,6 @@
 import SocialLogin from "../../components/login/SocialLogin";
 
-const Login = () => {
+const Register = () => {
   return (
     <div className="relative">
       <div className="bg-[rgb(240,242,245)]">
@@ -11,7 +11,7 @@ const Login = () => {
               বই ঘর
             </h1>
             <p className="text-sm md:text-[20px] lg:text-[28px] md:leading-6 lg:leading-9">
-              লগইন করুন
+              Register please
             </p>
           </div>
 
@@ -58,4 +58,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Register;

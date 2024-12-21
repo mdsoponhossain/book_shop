@@ -16,9 +16,15 @@ const Navbar = () => {
             {/* cart icon */}
             <CartItems></CartItems>
 
-            <button className="self-center px-8 py-3  rounded dark:bg-violet-600 dark:text-gray-50 border">
-              <NavLink to="/login">লগইন</NavLink>
-            </button>
+            {/* login & register button */}
+            <div className="flex gap-5">
+              <button className="btn btn-outline btn-secondary self-center px-8 py-3  rounded dark:bg-violet-600 dark:text-gray-50 border">
+                <NavLink to="/login">লগইন</NavLink>
+              </button>
+              <button className="btn btn-outline btn-secondary self-center px-8 py-3  rounded dark:bg-violet-600 dark:text-gray-50 border">
+                <NavLink to="/register">Register</NavLink>
+              </button>
+            </div>
           </div>
 
           <button className="p-4 lg:hidden">
