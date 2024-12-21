@@ -2,7 +2,11 @@ import Logo from "../../components/logo/Logo";
 import NavItems from "./navItems/NavItems";
 import CartItems from "./cartItems/CartItems";
 import { NavLink } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "../../contextApi/AuthProvider";
+import UserDropdown from "../../components/login/UserDropDown";
 const Navbar = () => {
+  const { user } = useContext(AuthContext);
   return (
     <>
       <header className="p-4 dark:bg-gray-100 dark:text-gray-800 ">
@@ -17,14 +21,18 @@ const Navbar = () => {
             <CartItems></CartItems>
 
             {/* login & register button */}
-            <div className="flex gap-5">
-              <button className="btn btn-outline btn-secondary self-center px-8 py-3  rounded dark:bg-violet-600 dark:text-gray-50 border">
-                <NavLink to="/login">লগইন</NavLink>
-              </button>
-              <button className="btn btn-outline btn-secondary self-center px-8 py-3  rounded dark:bg-violet-600 dark:text-gray-50 border">
-                <NavLink to="/register">Register</NavLink>
-              </button>
-            </div>
+            {user ? (
+              <UserDropdown />
+            ) : (
+              <div className="flex gap-5">
+                <button className="btn btn-outline btn-secondary self-center px-8 py-3  rounded dark:bg-violet-600 dark:text-gray-50 border">
+                  <NavLink to="/login">লগইন</NavLink>
+                </button>
+                <button className="btn btn-outline btn-secondary self-center px-8 py-3  rounded dark:bg-violet-600 dark:text-gray-50 border">
+                  <NavLink to="/register">Register</NavLink>
+                </button>
+              </div>
+            )}
           </div>
 
           <button className="p-4 lg:hidden">
