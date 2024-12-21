@@ -1,0 +1,30 @@
+[
+  {
+    "id": 5,
+    "name": "মোবি-ডিক",
+    "author": "হারম্যান মেলভিল",
+    "image": "https://www.scientiabooks.in/wp-content/uploads/2020/06/3116-MOBY-DICK.jpg",
+    "price": 1100
+  },
+  {
+    "id": 6,
+    "name": "ওয়ার অ্যান্ড পিস",
+    "author": "লিও টলস্টয়",
+    "image": "https://rukminim2.flixcart.com/image/850/1000/regionalbooks/t/4/y/war-peace-original-imad7ftd43zk6sfq.jpeg?q=20&crop=false",
+    "price": 1499
+  },
+  {
+    "id": 5,
+    "name": "মোবি-ডিক",
+    "author": "হারম্যান মেলভিল",
+    "image": "https://www.scientiabooks.in/wp-content/uploads/2020/06/3116-MOBY-DICK.jpg",
+    "price": 1100
+  },
+  {
+    "id": 6,
+    "name": "ওয়ার অ্যান্ড পিস",
+    "author": "লিও টলস্টয়",
+    "image": "https://rukminim2.flixcart.com/image/850/1000/regionalbooks/t/4/y/war-peace-original-imad7ftd43zk6sfq.jpeg?q=20&crop=false",
+    "price": 1499
+  }
+]

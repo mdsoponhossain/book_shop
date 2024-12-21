@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1,
+    "name": "দ্য গ্রেট গ্যাটসবী",
+    "author": "এফ. স্কট ফিটজেরাল্ড",
+    "image": "https://ds.rokomari.store/rokomari110/ProductNew20190903/260X372/294b91644_4313.jpg",
+    "price": 1099
+  },
+  {
+    "id": 2,
+    "name": "১৯৮৪",
+    "author": "জর্জ অরওয়েল",
+    "image": "https://kittychow-animalfarm.weebly.com/uploads/1/7/7/4/17741641/566072562_orig.jpg?146",
+    "price": 999
+  },
+  {
+    "id": 3,
+    "name": "টু কিল এ মকিংবার্ড",
+    "author": "হারপার লি",
+    "image": "https://ds.rokomari.store/rokomari110/ProductNew20190903/260X372/f5ab94ff4_153487.jpg",
+    "price": 1250
+  },
+  {
+    "id": 4,
+    "name": "প্রাইড অ্যান্ড প্রিজুডিস",
+    "author": "জেন অস্টেন",
+    "image": "https://fs.pbs.com.bd/DIR/Com/PBS/Product/Image/1822523.jpg",
+    "price": 875
+  },
+  {
+    "id": 5,
+    "name": "মোবি-ডিক",
+    "author": "হারম্যান মেলভিল",
+    "image": "https://www.scientiabooks.in/wp-content/uploads/2020/06/3116-MOBY-DICK.jpg",
+    "price": 1100
+  },
+  {
+    "id": 6,
+    "name": "ওয়ার অ্যান্ড পিস",
+    "author": "লিও টলস্টয়",
+    "image": "https://rukminim2.flixcart.com/image/850/1000/regionalbooks/t/4/y/war-peace-original-imad7ftd43zk6sfq.jpeg?q=20&crop=false",
+    "price": 1499
+  },
+  {
+    "id": 7,
+    "name": "দ্য ক্যাচার ইন দ্য রাই",
+    "author": "জে.ডি. স্যালিঞ্জার",
+    "image": "https://ds.rokomari.store/rokomari110/ProductNew20190903/260X372/The_Catcher_in_the_Rye-J_D_Salinger-879f7-230725.jpg",
+    "price": 1025
+  },
+  {
+    "id": 8,
+    "name": "ব্রেভ নিউ ওয়ার্ল্ড",
+    "author": "অলডাস হাক্সলি",
+    "image": "https://rukminim2.flixcart.com/image/850/1000/xif0q/book/w/1/s/brave-new-world-by-aldous-huxley-original-imah33zxgzg2dexe.jpeg?q=20&crop=false",
+    "price": 1349
+  },
+  {
+    "id": 9,
+    "name": "দ্য লর্ড অব দ্য রিংস: দ্য ফেলোশিপ অফ দ্য রিং",
+    "author": "জে.আর.আর. টলকিয়েন",
+    "image": "https://play-lh.googleusercontent.com/4Ab369J45qYxZR7PMWt4qM7W637_FH7ONh_RAQAOcINLyalCZ2-4Jzdj5nK0BGoTBx5rPRFu112XsefMAdY=w240-h480-rw",
+    "price": 1500
+  },
+  {
+    "id": 10,
+    "name": "দ্য হবিট",
+    "author": "জে.আর.আর. টলকিয়েন",
+    "image": "https://ds.rokomari.store/rokomari110/ProductNew20190903/260X372/527d51e7e_99492.jpg",
+    "price": 1399
+  },
+  {
+    "id": 11,
+    "name": "দ্য পিকচার অফ ডোরিয়ান গ্রে",
+    "author": "অস্কার ওয়াইল্ড",
+    "image": "https://ds.rokomari.store/rokomari110/ProductNew20190903/260X372/7c09706ce_11703.jpg",
+    "price": 950
+  },
+  {
+    "id": 12,
+    "name": "জেন আয়র",
+    "author": "চার্লট ব্রন্টে",
+    "image": "https://ds.rokomari.store/rokomari110/ProductNew20190903/260X372/90507469d_149678.jpg",
+    "price": 1075
+  },
+  {
+    "id": 13,
+    "name": "এনিমাল ফার্ম",
+    "author": "জর্জ অরওয়েল",
+    "image": "https://ds.rokomari.store/rokomari110/ProductNew20190903/260X372/ed12f6df8_40880.jpg",
+    "price": 799
+  },
+  {
+    "id": 14,
+    "name": "দ্য শাইনিং",
+    "author": "স্টিফেন কিং",
+    "image": "https://ds.rokomari.store/rokomari110/ProductNew20190903/260X372/4d2e31367d94_34054.gif",
+    "price": 1499
+  },
+  {
+    "id": 15,
+    "name": "দ্য ডা ভিঞ্চি কোড",
+    "author": "ড্যান ব্রাউন",
+    "image": "https://ds.rokomari.store/rokomari110/ProductNew20190903/260X372/4d09df552_63723.jpg",
+    "price": 1800
+  },
+  {
+    "id": 16,
+    "name": "দ্য আলকেমিস্ট",
+    "author": "পাউলো কোয়েলহো",
+    "image": "https://ds.rokomari.store/rokomari110/ProductNew20190903/260X372/4460e201d_53316.jpg",
+    "price": 1300
+  },
+  {
+    "id": 17,
+    "name": "দ্য গার্ল অন দ্য ট্রেন",
+    "author": "পাউলা হকিন্স",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC2Y8bv0KYmdj3EF9y7CYtwhU250ZuFkhESi4emCVbVUI05iL-agouyCY-WsuFRVNGaBA&usqp=CAU",
+    "price": 1150
+  },
+  {
+    "id": 18,
+    "name": "দ্য হাঙ্গার গেমস",
+    "author": "সুজান কোলিন্স",
+    "image": "https://ds.rokomari.store/rokomari110/ProductNew20190903/260X372/The_Hunger_Games-Suzanne_Collins-81848-376279.jpeg",
+    "price": 999
+  },
+  {
+    "id": 19,
+    "name": "গোন উইথ দ্য উইন্ড",
+    "author": "মার্গারেট মিচেল",
+    "image": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/844a31f743e4_43169.jpg",
+    "price": 1200
+  },
+  {
+    "id": 20,
+    "name": "দ্য ফল্ট ইন আওর স্টারস",
+    "author": "জন গ্রিন",
+    "image": "https://m.media-amazon.com/images/I/9166U1wfzWL._AC_UF1000,1000_QL80_.jpg",
+    "price": 1050
+  }
+]

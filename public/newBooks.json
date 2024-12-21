@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "name": "দ্য গ্রেট গ্যাটসবী",
+    "author": "এফ. স্কট ফিটজেরাল্ড",
+    "image": "https://ds.rokomari.store/rokomari110/ProductNew20190903/260X372/294b91644_4313.jpg",
+    "price": 1099
+  },
+  {
+    "id": 2,
+    "name": "১৯৮৪",
+    "author": "জর্জ অরওয়েল",
+    "image": "https://kittychow-animalfarm.weebly.com/uploads/1/7/7/4/17741641/566072562_orig.jpg?146",
+    "price": 999
+  },
+  {
+    "id": 3,
+    "name": "টু কিল এ মকিংবার্ড",
+    "author": "হারপার লি",
+    "image": "https://ds.rokomari.store/rokomari110/ProductNew20190903/260X372/f5ab94ff4_153487.jpg",
+    "price": 1250
+  },
+  {
+    "id": 4,
+    "name": "প্রাইড অ্যান্ড প্রিজুডিস",
+    "author": "জেন অস্টেন",
+    "image": "https://fs.pbs.com.bd/DIR/Com/PBS/Product/Image/1822523.jpg",
+    "price": 875
+  },
+  {
+    "id": 5,
+    "name": "মোবি-ডিক",
+    "author": "হারম্যান মেলভিল",
+    "image": "https://www.scientiabooks.in/wp-content/uploads/2020/06/3116-MOBY-DICK.jpg",
+    "price": 1100
+  },
+  {
+    "id": 6,
+    "name": "ওয়ার অ্যান্ড পিস",
+    "author": "লিও টলস্টয়",
+    "image": "https://rukminim2.flixcart.com/image/850/1000/regionalbooks/t/4/y/war-peace-original-imad7ftd43zk6sfq.jpeg?q=20&crop=false",
+    "price": 1499
+  },
+  {
+    "id": 5,
+    "name": "মোবি-ডিক",
+    "author": "হারম্যান মেলভিল",
+    "image": "https://www.scientiabooks.in/wp-content/uploads/2020/06/3116-MOBY-DICK.jpg",
+    "price": 1100
+  },
+  {
+    "id": 6,
+    "name": "ওয়ার অ্যান্ড পিস",
+    "author": "লিও টলস্টয়",
+    "image": "https://rukminim2.flixcart.com/image/850/1000/regionalbooks/t/4/y/war-peace-original-imad7ftd43zk6sfq.jpeg?q=20&crop=false",
+    "price": 1499
+  }
+]

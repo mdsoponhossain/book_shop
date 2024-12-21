@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 const Navbar = () => {
   return (
     <>
-      <header className="p-4 dark:bg-gray-100 dark:text-gray-800">
+      <header className="p-4 dark:bg-gray-100 dark:text-gray-800 ">
         <div className="container flex justify-between h-16 mx-auto">
           {/* logo container */}
           <Logo></Logo>

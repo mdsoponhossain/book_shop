@@ -15,7 +15,7 @@ const NavItems = () => {
       <li className="flex">
         <NavLink
           className="flex items-center px-4 -mb-1 lg:border-b-2 dark:border-"
-          to="/books"
+          to="/products"
         >
           বই সমূহ
         </NavLink>
@@ -24,7 +24,7 @@ const NavItems = () => {
       <li className="flex">
         <NavLink
           className="flex items-center px-4 -mb-1 lg:border-b-2 dark:border-"
-          to="/blogs"
+          to="/about"
         >
           ব্লগ
         </NavLink>
