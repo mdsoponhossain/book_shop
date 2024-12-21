@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.logo {
+  font-family: "Playwrite CU", cursive;
+  font-optical-sizing: auto;
+}
+
