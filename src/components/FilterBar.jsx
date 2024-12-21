@@ -8,6 +8,7 @@ const FilterBar = ({
   uniqueCategory,
   uniqueBrands,
 }) => {
+  console.log(uniqueBrands, "unique brands");
   return (
     <div className="bg-gray-200 h-full w-full md:min-h-screen p-4 rounded-md">
       <div className="flex items-center gap-1">

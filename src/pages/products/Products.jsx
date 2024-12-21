@@ -26,16 +26,24 @@ const Products = () => {
 
   useEffect(() => {
     setLoading(false);
-    fetch("./books.json")
+    fetch(
+      `http://localhost:4000/books?name=${search}&page=${page}&limit=${9}&category=${category}&brand=${brand}&sort=${sort}`
+    )
       .then((res) => res.json())
-      .then((data) => setProducts(data, 1234));
-  }, []);
+      .then((data) => {
+        setProducts(data?.products);
+        setUniqueBrands(data?.brands);
+        setUniqueCategory(data?.categories);
+        setTotalPage(Math.ceil(data.totalProducts / 9));
+      });
+  }, [search, page, category, brand, sort]);
 
   const handleSearch = (e) => {
     e.preventDefault();
     setSearch(e.target.search.value);
     e.target.search.value = "";
   };
+  console.log(search, "the value of search");
 
   const handleReset = () => {
     window.location.reload();
