@@ -9,9 +9,9 @@ const useUser = () => {
 
   useEffect(() => {
     if (user?.email) {
-      axios(`http://localhost:4000/user/${user?.email}`).then((data) =>
-        setUserData(data?.data)
-      );
+      axios(
+        `https://boi-bazar-server-five.vercel.app/user/${user?.email}`
+      ).then((data) => setUserData(data?.data));
     }
   }, [user?.email]);
 

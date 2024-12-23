@@ -10,7 +10,7 @@ const MyProducts = () => {
 
   useEffect(() => {
     if (user?.email) {
-      fetch(`http://localhost:4000/books/${user?.email}`)
+      fetch(`https://boi-bazar-server-five.vercel.app/books/${user?.email}`)
         .then((res) => res.json())
         .then((data) => setMybooks(data));
     }
@@ -18,7 +18,9 @@ const MyProducts = () => {
 
   const handleDelete = (id) => {
     const deleteBook = async () => {
-      const res = axios.delete(`http://localhost:4000/books/delete/${id}`);
+      const res = axios.delete(
+        `https://boi-bazar-server-five.vercel.app/books/delete/${id}`
+      );
 
       setToggle(!toggle);
     };

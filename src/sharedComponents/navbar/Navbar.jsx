@@ -1,12 +1,12 @@
 import Logo from "../../components/logo/Logo";
 import NavItems from "./navItems/NavItems";
 import CartItems from "./cartItems/CartItems";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../contextApi/AuthProvider";
 import UserDropdown from "../../components/login/UserDropDown";
 const Navbar = () => {
-  const { user } = useContext(AuthContext);
+  const { user, totalCart, userRole } = useContext(AuthContext);
   return (
     <>
       <header className="p-4 dark:bg-gray-100 dark:text-gray-800 ">
@@ -18,7 +18,11 @@ const Navbar = () => {
           </ul>
           <div className="items-center flex-shrink-0 hidden lg:flex">
             {/* cart icon */}
-            <CartItems></CartItems>
+            {userRole == "buyer" && (
+              <Link to="/dashboard/wish-list">
+                <CartItems totalCart={totalCart}></CartItems>
+              </Link>
+            )}
 
             {/* login & register button */}
             {user ? (

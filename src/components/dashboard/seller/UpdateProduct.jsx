@@ -19,7 +19,7 @@ const UpdateProduct = () => {
   const navigate = useNavigate();
   useEffect(() => {
     if (id) {
-      fetch(`http://localhost:4000/books/book/${id}`)
+      fetch(`https://boi-bazar-server-five.vercel.app/books/book/${id}`)
         .then((res) => res.json())
         .then((data) => setBook(data));
     }
@@ -53,11 +53,15 @@ const UpdateProduct = () => {
 
     if (sellerEmail && id) {
       axios
-        .patch(`http://localhost:4000/update-product/${id}`, product, {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        })
+        .patch(
+          `https://boi-bazar-server-five.vercel.app/update-product/${id}`,
+          product,
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          }
+        )
         .then((res) => {
           if (res?.data?.modifiedCount) {
             Swal.fire({

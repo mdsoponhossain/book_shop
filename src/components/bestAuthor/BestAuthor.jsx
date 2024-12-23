@@ -9,7 +9,7 @@ const BestAuthor = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    fetch("./newBooks.json")
+    fetch("https://boi-bazar-server-five.vercel.app/new-books")
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);
@@ -48,7 +48,7 @@ const BestAuthor = () => {
           >
             {products?.map((product) => (
               <SwiperSlide
-                key={product?.id}
+                key={product?._id}
                 className="flex items-center gap-2"
               >
                 <Card

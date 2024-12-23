@@ -3,7 +3,40 @@ import { FaSearch } from "react-icons/fa";
 import { PiShareNetworkFill } from "react-icons/pi";
 import { BsCart2 } from "react-icons/bs";
 import "./card.css";
+import { useContext } from "react";
+import { AuthContext } from "../../contextApi/AuthProvider";
+import axios from "axios";
+import Swal from "sweetalert2";
 const Card = ({ styles, iconsStyles, cardPadding, product }) => {
+  const { user } = useContext(AuthContext);
+  const handleWishList = async (product) => {
+    if (user?.email) {
+      const res = await axios.post(
+        `https://boi-bazar-server-five.vercel.app/books/cart/${user?.email}`,
+        { product }
+      );
+      console.log(res?.data);
+      if (res?.data?.modifiedCount === 1) {
+        Swal.fire({
+          position: "center",
+          icon: "success",
+          title: "Added to WishList",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+      }
+    } else {
+      console.log("res?.data");
+      Swal.fire({
+        position: "center",
+        icon: "error",
+        title: "Please login first",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+    }
+  };
+
   return (
     <div
       className={`card-container drop-shadow-sm bg-base-100 ${cardPadding} 
@@ -16,7 +49,10 @@ const Card = ({ styles, iconsStyles, cardPadding, product }) => {
             <div
               className={`text-white  font-bold ${iconsStyles} bookAttachedIcons z-50`}
             >
-              <div className="p-2 rounded-full hover:bg-red-700 bg-black my-[28%]  text-white">
+              <div
+                onClick={() => handleWishList(product)}
+                className="p-2 rounded-full hover:bg-red-700 bg-black my-[28%]  text-white"
+              >
                 <GiEternalLove></GiEternalLove>
               </div>
 
@@ -28,7 +64,10 @@ const Card = ({ styles, iconsStyles, cardPadding, product }) => {
                 <PiShareNetworkFill></PiShareNetworkFill>
               </div>
 
-              <div className="p-2 rounded-full hover:bg-red-700 bg-black my-[28%]  text-white">
+              <div
+                onClick={() => handleWishList(product)}
+                className="p-2 rounded-full hover:bg-red-700 bg-black my-[28%]  text-white"
+              >
                 <BsCart2></BsCart2>
               </div>
             </div>

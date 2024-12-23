@@ -18,6 +18,9 @@ const googleProvider = new GoogleAuthProvider();
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [toggle, setToggle] = useState(true);
+  const [totalCart, setTotalCart] = useState(0);
+  const [userRole, setUserRole] = useState(0);
   const createUser = (email, password) => {
     return createUserWithEmailAndPassword(auth, email, password);
   };
@@ -36,7 +39,7 @@ const AuthProvider = ({ children }) => {
       setUser(currentUser);
       if (currentUser) {
         axios
-          .post(`http://localhost:4000/authentication`, {
+          .post(`https://boi-bazar-server-five.vercel.app/authentication`, {
             email: currentUser?.email,
           })
           .then((res) => {
@@ -45,6 +48,7 @@ const AuthProvider = ({ children }) => {
               setLoading(false);
             }
           });
+        setToggle(!toggle);
       } else {
         localStorage.removeItem("token");
         setLoading(false);
@@ -55,6 +59,10 @@ const AuthProvider = ({ children }) => {
     };
   }, []);
 
+  const handleCard = (data) => {
+    console.log(data);
+  };
+
   const authInfo = {
     user,
     setUser,
@@ -63,6 +71,12 @@ const AuthProvider = ({ children }) => {
     loginUser,
     googleLogin,
     logOut,
+    handleCard,
+    totalCart,
+    setTotalCart,
+    toggle,
+    setUserRole,
+    userRole,
   };
 
   return (

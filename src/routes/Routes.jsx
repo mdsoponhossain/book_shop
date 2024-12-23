@@ -12,6 +12,7 @@ import AddProducts from "../components/dashboard/seller/AddProduct";
 import MyProducts from "../components/dashboard/seller/MyProducts";
 import ManageUser from "../components/dashboard/admin/ManageUser";
 import UpdateProduct from "../components/dashboard/seller/UpdateProduct";
+import WishList from "../components/buyer/WishList";
 
 const router = createBrowserRouter([
   {
@@ -67,6 +68,10 @@ const router = createBrowserRouter([
       {
         path: "/dashboard/books/:id",
         element: <UpdateProduct />,
+      },
+      {
+        path: "/dashboard/wish-list",
+        element: <WishList />,
       },
     ],
   },

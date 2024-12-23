@@ -25,7 +25,7 @@ const Products = () => {
   useEffect(() => {
     setLoading(false);
     fetch(
-      `http://localhost:4000/books?name=${search}&page=${page}&limit=${9}&category=${category}&brand=${brand}&sort=${sort}`
+      `https://boi-bazar-server-five.vercel.app/books?name=${search}&page=${page}&limit=${9}&category=${category}&brand=${brand}&sort=${sort}`
     )
       .then((res) => res.json())
       .then((data) => {

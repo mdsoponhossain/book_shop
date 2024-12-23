@@ -4,7 +4,7 @@ import SectionTitle from "../../sharedComponents/sectionTitle/SectionTitle";
 const NewBooks = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:4000/new-books")
+    fetch("https://boi-bazar-server-five.vercel.app/new-books")
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);

@@ -6,7 +6,7 @@ const ManageUser = () => {
   const [role, setRole] = useState("");
   const [toggle, setToggle] = useState(true);
   useEffect(() => {
-    fetch("http://localhost:4000/users")
+    fetch("https://boi-bazar-server-five.vercel.app/users")
       .then((res) => res.json())
       .then((data) => setUsers(data));
   }, [toggle]);
@@ -14,9 +14,12 @@ const ManageUser = () => {
   // for updating user:
   const handleUpdateUser = (userId) => {
     const updateUser = async () => {
-      const res = await axios.patch(`http://localhost:4000/users/${userId}`, {
-        role,
-      });
+      const res = await axios.patch(
+        `https://boi-bazar-server-five.vercel.app/users/${userId}`,
+        {
+          role,
+        }
+      );
       setToggle(!toggle);
     };
     updateUser();
@@ -25,7 +28,9 @@ const ManageUser = () => {
   // for updating user:
   const handleDeleteUser = (userId) => {
     const deleteUser = async () => {
-      const res = await axios.delete(`http://localhost:4000/users/${userId}`);
+      const res = await axios.delete(
+        `https://boi-bazar-server-five.vercel.app/users/${userId}`
+      );
       setToggle(!toggle);
     };
     deleteUser();

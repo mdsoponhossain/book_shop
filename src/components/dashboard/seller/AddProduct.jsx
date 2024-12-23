@@ -40,7 +40,7 @@ const AddProducts = () => {
 
     if (sellerEmail) {
       axios
-        .post("http://localhost:4000/add-product", product, {
+        .post("https://boi-bazar-server-five.vercel.app/add-product", product, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

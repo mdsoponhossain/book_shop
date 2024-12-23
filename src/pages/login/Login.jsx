@@ -3,6 +3,7 @@ import SocialLogin from "../../components/login/SocialLogin";
 import { useContext } from "react";
 import { AuthContext } from "../../contextApi/AuthProvider";
 import { useForm } from "react-hook-form";
+import Swal from "sweetalert2";
 
 const Login = () => {
   const {
@@ -14,8 +15,16 @@ const Login = () => {
   const navigate = useNavigate();
 
   const onSubmit = (data) => {
-    loginUser(data.email, data.password);
-    navigate("/");
+    loginUser(data.email, data.password).then(() => {
+      Swal.fire({
+        position: "center",
+        icon: "success",
+        title: "Login successful",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+      navigate("/");
+    });
   };
 
   return (

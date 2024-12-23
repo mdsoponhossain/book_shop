@@ -3,7 +3,7 @@ import { MdOutlineInventory2 } from "react-icons/md";
 import useUser from "../hooks/useUser";
 import { useContext } from "react";
 import { AuthContext } from "../contextApi/AuthProvider";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { IoHomeOutline } from "react-icons/io5";
 import { TbLogout2 } from "react-icons/tb";
 import { GrOverview } from "react-icons/gr";
@@ -33,10 +33,23 @@ const adminRoutes = [
     icon: <FaPeopleGroup />,
   },
 ];
+const buyerRoutes = [
+  {
+    id: 1,
+    route: "/dashboard/wish-list",
+    title: "WishList",
+    icon: <FaPeopleGroup />,
+  },
+];
 
 const Sidebar = () => {
+  const navigate = useNavigate();
   const userData = useUser();
-  const { logOut } = useContext(AuthContext);
+  const { logOut, user, setUserRole } = useContext(AuthContext);
+  setUserRole(userData?.role);
+  if (!user?.email) {
+    navigate("/login");
+  }
   return (
     <div className="bg-gray-200 min-h-screen   border-r border-black px-8 py-16">
       <h1 className="text-3xl font-bold mb-8">Gadget Shop</h1>
@@ -60,6 +73,16 @@ const Sidebar = () => {
 
         {userData?.role === "admin" &&
           adminRoutes?.map((route) => (
+            <li key={route.id} className="border border-black rounded-md p-2">
+              <NavLink to={route.route} className="flex items-center gap-3">
+                <>{route.icon}</>
+                <p>{route.title}</p>
+              </NavLink>
+            </li>
+          ))}
+
+        {userData?.role === "buyer" &&
+          buyerRoutes?.map((route) => (
             <li key={route.id} className="border border-black rounded-md p-2">
               <NavLink to={route.route} className="flex items-center gap-3">
                 <>{route.icon}</>

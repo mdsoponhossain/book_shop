@@ -24,18 +24,20 @@ const Register = () => {
     const userData = { email, role, status, wishlist };
 
     createUser(data.email, data.password).then(() => {
-      axios.post("http://localhost:4000/user", userData).then((res) => {
-        if (res?.data?.insertedId) {
-          Swal.fire({
-            position: "center",
-            icon: "success",
-            title: "Registration successful!",
-            showConfirmButton: false,
-            timer: 1500,
-          });
-          navigate("/");
-        }
-      });
+      axios
+        .post("https://boi-bazar-server-five.vercel.app/user", userData)
+        .then((res) => {
+          if (res?.data?.insertedId) {
+            Swal.fire({
+              position: "center",
+              icon: "success",
+              title: "Registration successful!",
+              showConfirmButton: false,
+              timer: 1500,
+            });
+            navigate("/");
+          }
+        });
     });
   };
 
