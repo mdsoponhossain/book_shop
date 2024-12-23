@@ -25,12 +25,16 @@ const Navbar = () => {
               <UserDropdown />
             ) : (
               <div className="flex gap-5">
-                <button className="btn btn-outline btn-secondary self-center px-8 py-3  rounded dark:bg-violet-600 dark:text-gray-50 border">
-                  <NavLink to="/login">লগইন</NavLink>
-                </button>
-                <button className="btn btn-outline btn-secondary self-center px-8 py-3  rounded dark:bg-violet-600 dark:text-gray-50 border">
-                  <NavLink to="/register">Register</NavLink>
-                </button>
+                <NavLink to="/login">
+                  <button className="btn btn-outline btn-secondary self-center px-8 py-3  rounded dark:bg-violet-600 dark:text-gray-50 border">
+                    লগইন
+                  </button>
+                </NavLink>
+                <NavLink to="/register">
+                  <button className="btn btn-outline btn-secondary self-center px-8 py-3  rounded dark:bg-violet-600 dark:text-gray-50 border">
+                    Register
+                  </button>
+                </NavLink>
               </div>
             )}
           </div>

@@ -22,8 +22,6 @@ const Products = () => {
   const [totalPage, setTotalPage] = useState(1);
   const [page, setPage] = useState(1);
 
-  console.log(category, brand);
-
   useEffect(() => {
     setLoading(false);
     fetch(
@@ -43,7 +41,6 @@ const Products = () => {
     setSearch(e.target.search.value);
     e.target.search.value = "";
   };
-  console.log(search, "the value of search");
 
   const handleReset = () => {
     window.location.reload();

@@ -8,7 +8,7 @@ const SearchBar = ({ handleSearch }) => {
         placeholder="Search Products"
         className="max-w-md p-[11px] border border-black rounded-l-md"
       />
-      <button className="btn rounded-l-none rounded-r-md btn-outline bg-gray-300">
+      <button className="btn btn-secondary rounded-l-none rounded-r-md  ">
         <IoMdSearch size={20} />
       </button>
     </form>

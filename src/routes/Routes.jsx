@@ -6,6 +6,12 @@ import Register from "../pages/register/Register";
 import Contact from "../pages/contact/Contact";
 import Products from "../pages/products/Products";
 import About from "../pages/about/About";
+import Dashboard from "../layouts/dashboard/Dashboard";
+import Overview from "../components/dashboard/Overview";
+import AddProducts from "../components/dashboard/seller/AddProduct";
+import MyProducts from "../components/dashboard/seller/MyProducts";
+import ManageUser from "../components/dashboard/admin/ManageUser";
+import UpdateProduct from "../components/dashboard/seller/UpdateProduct";
 
 const router = createBrowserRouter([
   {
@@ -35,6 +41,32 @@ const router = createBrowserRouter([
       {
         path: "/about",
         element: <About />,
+      },
+    ],
+  },
+  {
+    path: "/dashboard",
+    element: <Dashboard />,
+    children: [
+      {
+        path: "/dashboard/overview",
+        element: <Overview />,
+      },
+      {
+        path: "/dashboard/add-book",
+        element: <AddProducts />,
+      },
+      {
+        path: "/dashboard/my-books",
+        element: <MyProducts />,
+      },
+      {
+        path: "/dashboard/all-users",
+        element: <ManageUser />,
+      },
+      {
+        path: "/dashboard/books/:id",
+        element: <UpdateProduct />,
       },
     ],
   },

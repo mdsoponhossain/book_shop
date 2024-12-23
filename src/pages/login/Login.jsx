@@ -1,6 +1,23 @@
+import { Link, useNavigate } from "react-router-dom";
 import SocialLogin from "../../components/login/SocialLogin";
+import { useContext } from "react";
+import { AuthContext } from "../../contextApi/AuthProvider";
+import { useForm } from "react-hook-form";
 
 const Login = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+  const { loginUser } = useContext(AuthContext);
+  const navigate = useNavigate();
+
+  const onSubmit = (data) => {
+    loginUser(data.email, data.password);
+    navigate("/");
+  };
+
   return (
     <div className="relative">
       <div className="bg-[rgb(240,242,245)]">
@@ -18,27 +35,37 @@ const Login = () => {
           {/*  login form */}
           <div className="md:w-1/2 p-3 md:p-4 lg:p-8 bg-white mt-4 md:pt-4">
             <SocialLogin />
-            <input
-              className="pl-2 w-full h-10 border "
-              type="text"
-              name="email"
-              id=""
-              placeholder="Email address or phone number"
-            />{" "}
-            <br />
-            <input
-              className="pl-2 w-full h-10 border my-3"
-              type="text"
-              name="password"
-              id=""
-              placeholder="Password"
-            />
-            <br />
-            <input
-              className="w-full bg-[#F62681] py-1 px-3 h-10 text-white"
-              type="submit"
-              value="Log In"
-            />
+            <form onSubmit={handleSubmit(onSubmit)}>
+              <input
+                className="pl-2 w-full h-10 border "
+                type="text"
+                {...register("email", { required: true })}
+                placeholder="Email address or phone number"
+              />
+              {errors.email && (
+                <p className="text-red-500 text-sm font-light">
+                  email is required
+                </p>
+              )}
+              <br />
+              <input
+                className="pl-2 w-full h-10 border my-3"
+                type="text"
+                {...register("password", { required: true, minLength: 6 })}
+                placeholder="Password"
+              />
+              {errors.password?.type === "required" && (
+                <p className="text-red-500 text-sm font-light">
+                  password is required
+                </p>
+              )}
+              <br />
+              <input
+                className="w-full bg-[#F62681] py-1 px-3 h-10 text-white"
+                type="submit"
+                value="Log In"
+              />
+            </form>
             <br />
             <div className="grid justify-center">
               <a className="my-3" href="#">
@@ -47,9 +74,12 @@ const Login = () => {
             </div>
             <hr />
             <div className="grid justify-center my-2">
-              <button className="bg-[#0671B7] text-white py-1 px-5 mx-auto w-[200px]">
+              <Link
+                to="/register"
+                className="bg-[#0671B7] text-white py-1 px-5 mx-auto w-[200px]"
+              >
                 Create New Account
-              </button>
+              </Link>
             </div>
           </div>
         </section>

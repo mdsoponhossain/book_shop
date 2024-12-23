@@ -13,7 +13,6 @@ const BestAuthor = () => {
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);
-        console.log(data, 111);
       });
   }, []);
   return (

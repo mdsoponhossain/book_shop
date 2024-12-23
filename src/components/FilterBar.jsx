@@ -8,7 +8,6 @@ const FilterBar = ({
   uniqueCategory,
   uniqueBrands,
 }) => {
-  console.log(uniqueBrands, "unique brands");
   return (
     <div className="bg-gray-200 h-full w-full md:min-h-screen p-4 rounded-md">
       <div className="flex items-center gap-1">
@@ -24,7 +23,7 @@ const FilterBar = ({
           >
             <option value="">Brands</option>
             {uniqueBrands?.map((brand, index) => (
-              <option key={index} value={brand}>
+              <option key={brand} value={brand}>
                 {brand}
               </option>
             ))}
@@ -38,7 +37,7 @@ const FilterBar = ({
           >
             <option value="">Categories</option>
             {uniqueCategory?.map((category, index) => (
-              <option key={index} value={category}>
+              <option key={category} value={category}>
                 {category}
               </option>
             ))}
@@ -48,7 +47,7 @@ const FilterBar = ({
 
       <button
         onClick={handleReset}
-        className="btn mt-4 w-full btn-primary flex items-center"
+        className="btn btn-secondary mt-4 w-full btn-primary flex items-center"
       >
         <p>Reset</p>
         <GrPowerReset />

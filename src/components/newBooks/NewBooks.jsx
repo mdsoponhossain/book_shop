@@ -4,11 +4,10 @@ import SectionTitle from "../../sharedComponents/sectionTitle/SectionTitle";
 const NewBooks = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    fetch("./newBooks.json")
+    fetch("http://localhost:4000/new-books")
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);
-        console.log(data, 111);
       });
   }, []);
 
@@ -21,7 +20,7 @@ const NewBooks = () => {
       <div className="max-w-7xl mx-auto h-fit mt-5 grid sm:grid-cols-2 md:grid-cols-3 px-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
         {products?.map((product) => (
           <Card
-            key={product?.id}
+            key={product?._id}
             product={product}
             styles={"h-[450px]"}
             iconsStyles={"text-2xl"}

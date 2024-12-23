@@ -34,7 +34,21 @@ const AuthProvider = ({ children }) => {
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
-      console.log("current user:", currentUser);
+      if (currentUser) {
+        axios
+          .post(`http://localhost:4000/authentication`, {
+            email: currentUser?.email,
+          })
+          .then((res) => {
+            if (res?.data?.token) {
+              localStorage.setItem("token", res.data.token);
+              setLoading(false);
+            }
+          });
+      } else {
+        localStorage.removeItem("token");
+        setLoading(false);
+      }
     });
     return () => {
       unsubscribe();
