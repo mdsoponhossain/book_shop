@@ -94,23 +94,6 @@ JWT_SECRET=<your_jwt_secret>
 
 ---
 
-## Project Structure
-
-### Frontend
-
-- `/src/components`: Reusable components
-- `/src/pages`: Application pages
-- `/src/context`: Context API for state management
-
-### Backend
-
-- `/routes`: API routes
-- `/models`: Mongoose schemas
-- `/controllers`: Business logic for routes
-- `/middleware`: Authentication and authorization
-
----
-
 ## Live Preview
 
 - [BoiGhor Website](https://boi-ghor-827b2.web.app/products)
